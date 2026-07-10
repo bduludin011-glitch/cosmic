@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cosmic SMP</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Orbitron',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#040b18,#091f38,#00172d);
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:hidden;
+color:white;
+}
+
+body::before{
+content:"";
+position:absolute;
+width:150%;
+height:150%;
+background:url("https://www.transparenttextures.com/patterns/stardust.png");
+animation:move 80s linear infinite;
+opacity:.3;
+}
+
+@keyframes move{
+from{transform:translate(0,0);}
+to{transform:translate(-500px,-500px);}
+}
+
+.card{
+position:relative;
+z-index:2;
+width:420px;
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,.1);
+border-radius:25px;
+padding:40px;
+text-align:center;
+box-shadow:0 0 35px rgba(0,166,255,.4);
+}
+
+.logo{
+width:140px;
+height:140px;
+border-radius:50%;
+object-fit:cover;
+border:4px solid #00A6FF;
+box-shadow:0 0 30px #00A6FF;
+margin-bottom:20px;
+animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-10px);}
+}
+
+h1{
+font-size:42px;
+color:#00A6FF;
+text-shadow:0 0 15px #00A6FF;
+}
+
+.subtitle{
+margin:15px 0;
+color:#ddd;
+}
+
+.ip{
+font-size:20px;
+margin-top:20px;
+}
+
+.port{
+color:#00A6FF;
+margin-top:8px;
+}
+
+button{
+margin-top:15px;
+padding:14px 35px;
+border:none;
+border-radius:12px;
+cursor:pointer;
+font-size:16px;
+background:#00A6FF;
+color:white;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+box-shadow:0 0 20px #00A6FF;
+}
+
+.discord{
+display:inline-block;
+margin-top:15px;
+text-decoration:none;
+color:white;
+background:#5865F2;
+padding:14px 35px;
+border-radius:12px;
+}
+
+footer{
+margin-top:30px;
+color:#aaa;
+font-size:13px;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="card">
+
+<img src="logo.jpg" class="logo">
+
+<h1>COSMIC ECOCPVP</h1>
+
+<p class="subtitle">
+Java & Bedrock Crossplay!
+</p>
+
+<div class="ip">
+play.kiwcosmic.my.id
+</div>
+
+<div class="port">
+Bedrock Port : 25578
+</div>
+
+<button onclick="copyIP()">
+📋 Copy IP
+</button>
+
+<br>
+
+<a class="discord" href="https://discord.gg/t9bHXdcpZ" target="_blank">
+Discord
+</a>
+
+<footer>
+
+🟢 Online 24/7
+
+</footer>
+
+</div>
+
+<script>
+
+function copyIP(){
+navigator.clipboard.writeText("play.kiwcosmic.my.id");
+alert("IP berhasil disalin!");
+}
+
+</script>
+
+</body>
+</html>
